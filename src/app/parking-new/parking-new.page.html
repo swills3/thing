@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>New Parking</ion-title>
+    <ion-back-button defaultHref="/tabs/tab1"></ion-back-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="content-background" no-bounce>
+  <form (submit)="addParking()" class="form-div">
+    <ion-list>
+      <ion-item>
+        <ion-label position="stacked">Type</ion-label>
+        <ion-select [(ngModel)]="newParking.type" interface="action-sheet" name="type" >
+          <ion-select-option value="parking1">1 hours</ion-select-option>
+          <ion-select-option value="parking2">2 hours</ion-select-option>
+          <ion-select-option value="parking3">3 hours</ion-select-option>
+          <ion-select-option value="parking4">4 hours</ion-select-option>
+          <ion-select-option value="parking5">All Day</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Address</ion-label>
+        <ion-input type="text" [(ngModel)]="newParking.description" name="description"> </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Cost</ion-label>
+        <ion-input type="test" [(ngModel)]="newParking.cost" name="cost"> </ion-input>
+      </ion-item>
+
+      <ion-button expand="full" type="submit" [disabled]="inputCheck()">Submit</ion-button>
+    </ion-list>
+
+  </form>
+
+</ion-content>

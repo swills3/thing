@@ -1,0 +1,37 @@
+<ion-header>
+  <!-- <ion-toolbar>
+    <ion-title>Login</ion-title>
+  </ion-toolbar> -->
+</ion-header>
+
+<ion-content force-overscroll="false">
+<gl-background-video src="assets/background-video/background-video.mp4" poster="assets/background-video/background-video-image.png"></gl-background-video>
+  <div class="page-centered-element">
+    <div class="content">
+      <h1>Welcome</h1>
+        <h5>This is Sparkr</h5>
+        <div class="buttons-container">
+  <form (submit)="doLogin()" class="form-div">
+    <ion-list>
+      <ion-item>
+        <ion-label position="stacked">Email</ion-label>
+        <ion-input type="email" [(ngModel)]="account.email" name="email"> </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Password</ion-label>
+        <ion-input type="password" [(ngModel)]="account.password" name="password"> </ion-input>
+      </ion-item>
+
+      <ion-button type="submit">Submit</ion-button>
+    </ion-list>
+
+  </form>
+  <div class="login-div" (click)="gotoSignup()">Need an account? Tap here to signup.</div>
+
+      </div>
+    </div>
+  </div>
+</ion-content>
+
+<!-- <ion-content class="content-background" no-bounce, force-overscroll="false"> -->
